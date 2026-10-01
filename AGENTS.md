@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep Spotlight content pages as separate TanStack routes sharing reusable navigation and player UI, so each view remains directly addressable.
