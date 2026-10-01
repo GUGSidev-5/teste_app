@@ -10,7 +10,6 @@ import { useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 
 export const images = {
-  logo: "https://lh3.googleusercontent.com/aida/AEtjO1WKngjWruWq_Xg674fEW_aB-T1qgEimutX-5wWFBlt4LMhY5q09YjYu1v7ZnCIisUWaUAxH_ju-lVZLFGv7fjGOptA73AxbhNRoi_pT3Byl1kWntY_a8j4yzzWofyWr4o4mIYwjHyrmx6iLxP81L_W5cMD9Zzr031QpWDMDq8sgL1k1ZVzk6skj691RP6gK2NZKBhhBKToNPT_iR9JUNsJ-_QfyT9fIMkUhRMJuCLf9hDO6SoQ3mHcSfFI",
   avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuAaPiZyW68fCesw6M2oKkXs3WkDnlt__ZygTKqMblL-T-2jOjn3LtVn1ARGzvd2mmpXTbQ85kin5u_exj8wZyd3UuUC4SEH5a6h_U9FZRAI0i7Oti_fuvqXMjk9HRr6V8sO_jHMROUzLFCaaTsTjOPKYWF_9huKPm1QI8W7UcK5Fxn6r2s4IZ_tfXLVAmCTyy3Esy-21AcE9I0ePIOu_3oyT0qe_WIJcs6rj1R7WaacXtyNeitk0b_i",
   cellist: "https://lh3.googleusercontent.com/aida-public/AB6AXuAGfdmyAXZ5Km0nFVZexP1eaOdxNkge7mX1FYhoERZfYSuf-PoV8gaHrShYjhtcZPY5UT8R0Wi93xMHg6Z4EZ7K5rNUjJIXDXZ08ELwJVAnaGKqAeponI-RW8UWLC32fO5EHsRov_r6WcuSVaKWW0PtDlvFLO9-vG2rnuhfBB7WiB0UZzCAjci8viqAPq6qIaFNCMXbM-my0Ovf7r_q8GhNCTy2usimZuKzyIp9qjFngMOd8-J7RPfP",
   trumpet: "https://lh3.googleusercontent.com/aida-public/AB6AXuCrVTyDJgHlDFx6G4NmR2I5etJ_mbwOzezPbzxV0OZBFkNhEHIKa-PIeoB1Kd0xgRr5wuXjZzqH9MhO4VjjvNmmRZ6oUFEl7a6kl1kDA7y2OvvIVJ0sPQPlqI_7nUHXk6agISlDctG5KsEAWHtSH-GH6zubPItI59T7NUvfwcE4CJDsweDmpp-PmP9MYt9s1IqbfC8PbEtrGm6bIFL627cfA48fw1BEsxddFxmofQgVb34qwaFLvfs9",
@@ -19,10 +18,14 @@ export const images = {
   helena: "https://lh3.googleusercontent.com/aida-public/AB6AXuCgaH4izHap25Uf5VaRDLZdLBe703vgfUlzGEmtnfx0zG2o-4i6xd_dnJIIjwUWZ02ZLmroOhwIzOU68jONyEtc7bYsAWQZSlGJjVjBWetnCe3VTvHDYLxe-b9dvjTS_K6Th5xqVhFySLmMl4fzYzadq9Sn0KF2Pm9fEmpbM9VMRxHWT_tZPu2dbLuYTx4HU0O1QymYN03prMghd28G5tcLdYgvmyu41MK8bOdc-yeArTWDoLACiipy",
 };
 
+function BrandMark() {
+  return <span className="flex size-7 items-center justify-center rounded-full border border-primary/70 bg-secondary shadow-glow" aria-hidden="true"><span className="flex h-4 items-center gap-0.5">{[7,13,18,11,7].map((h,i)=><span key={i} className="w-0.5 rounded-full bg-primary" style={{height:h}} />)}</span></span>;
+}
+
 export function BrandHeader({ title }: { title?: string }) {
   return <header className="sticky top-0 z-40 flex h-16 items-center justify-between bg-background/90 px-4 backdrop-blur-xl">
     <div className="flex items-center gap-2">
-      <img src={images.logo} alt="Spotlight" className="h-7 w-8 object-contain" />
+      <BrandMark />
       <strong className="text-lg">{title ?? "Spotlight"}</strong>
     </div>
     <div className="flex items-center gap-2">
